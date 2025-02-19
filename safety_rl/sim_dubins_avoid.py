@@ -256,9 +256,10 @@ if __name__ == "__main__":
     parser.add_argument("--configs", nargs="+")
     parser.add_argument("--expt_name", type=str, default=None)
     parser.add_argument("--resume_run", type=bool, default=False)
+    parser.add_argument("--annealing", type=bool, default=False)
     # environment parameters
     config, remaining = parser.parse_known_args()
-
+    annealing = config.annealing
     if not config.resume_run:
         curr_time = datetime.now().strftime("%m%d/%H%M%S")
         config.expt_name = (
@@ -294,6 +295,10 @@ if __name__ == "__main__":
     print("---------------------")
 
     final_config.name = 'privileged_state'
+    if annealing:
+        final_config.annealing = True
+    else:
+        final_config.annealing = False
     print(final_config.annealing)
     RARL(final_config)
   
