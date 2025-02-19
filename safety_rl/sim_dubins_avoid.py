@@ -294,11 +294,13 @@ if __name__ == "__main__":
     cprint(f"Logging to: {final_config.logdir}", "cyan", attrs=["bold"])
     print("---------------------")
 
-    final_config.name = 'privileged_state'
+    
     if annealing:
         final_config.annealing = True
+        final_config.name = 'privileged_state_annealing'
     else:
         final_config.annealing = False
+        final_config.name = 'privileged_state'
     print(final_config.annealing)
     RARL(final_config)
   
