@@ -126,7 +126,7 @@ defaults:
   # num datapts for training encoder, transition, classifier
   num_pts: 5000
 
-  grid_path: /home/kensuke/latent-safety/logs/grid/LS_BRT_v1_w1.25.npy
+  grid_path: LS_BRT_v1_w1.25.npy
   # HJ computation bounds
   x_min: -1.1
   x_max: 1.1
