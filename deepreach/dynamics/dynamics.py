@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from utils import diff_operators
+from eais_hw3.deepreach.utils import diff_operators
 
 import math
 import torch
