@@ -51,10 +51,8 @@ if (mode == 'all') or (mode == 'train'):
     p.add_argument('--tMin', type=float, default=0.0, required=False, help='Start time of the simulation')
     p.add_argument('--tMax', type=float, default=1.0, required=False, help='End time of the simulation')
     
-    # NOTE: If you are digging through this code, counter_start should be the same as pretrain_iters
-    # However, it is hard to break deepreach in such a simple setting. So I nerfed deepreach parameters to
-    # illustrate one of the key issues with the approach (value function collapsing to a trivial soln)
-    p.add_argument('--counter_start', type=int, default=1500, required=False, help='Defines the initial time for the curriculum training')
+    
+    p.add_argument('--counter_start', type=int, default=500, required=False, help='Defines the initial time for the curriculum training')
     p.add_argument('--counter_end', type=int, default=-1, required=False, help='Defines the linear step for curriculum training starting from the initial time')
     p.add_argument('--num_src_samples', type=int, default=1000, required=False, help='Number of source samples (initial-time samples) at each time step')
     p.add_argument('--num_target_samples', type=int, default=0, required=False, help='Number of samples inside the target set')
