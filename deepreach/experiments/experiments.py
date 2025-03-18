@@ -19,8 +19,8 @@ from tqdm.autonotebook import tqdm
 from collections import OrderedDict
 from datetime import datetime
 from sklearn import svm 
-from eais_hw3.deepreach.utils import diff_operators
-from eais_hw3.deepreach.utils.error_evaluators import scenario_optimization, ValueThresholdValidator, MultiValidator, MLPConditionedValidator, target_fraction, MLP, MLPValidator, SliceSampleGenerator
+from utils import diff_operators
+from utils.error_evaluators import scenario_optimization, ValueThresholdValidator, MultiValidator, MLPConditionedValidator, target_fraction, MLP, MLPValidator, SliceSampleGenerator
 
 class Experiment(ABC):
     def __init__(self, model, dataset, experiment_dir, use_wandb):
